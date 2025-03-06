@@ -32,13 +32,13 @@ function partOneB () {
   let bill, billNumber, tip;
 
   // 1. prompt for the bill
-  
+  bill = prompt("What is your bill?");
   // 2. convert it to number
-  
+  billNumber = Number(bill);
   // 3. calculate tip
-
+tip = billNumber * .20;
   // 4. set the message
-  
+  messageParagraph.innerHTML = `Your bill is ${bill}. Your tip is ${tip} at 20%.`
 }
 
 // Example
@@ -53,20 +53,23 @@ function partTwoA () {
   // 3. calculate split bill
   split = billNumber/3;
   // 4. set the message
-  messageParagraph.innerHTML = `Your bill is ${bill}. You part of the bill is ${split} among three friends.`;
+  messageParagraph.innerHTML = `Your bill is ${bill}. Your part of the bill is ${split} among three friends.`;
   
 }
 
 // Try it!
+// Split the Bill among two people
 function partTwoB () {
-  alert("Try it!");
+  //alert("Try it!");
+  let bill, billNumber, split;
   // 1. prompt for the bill
-
+bill = prompt("What is your bill?");
   // 2. convert it to number
-
+billNumber = Number(bill);
   // 3. calculate split bill
-
+split = billNumber/2;
   // 4. set the message
+  messageParagraph.innerHTML = ` Your bill is ${bill}. Your part of the bill is ${split} among two friends.`;
 }
 
 // Example
@@ -99,15 +102,16 @@ function twentyPercentTip(x) {
   
 }
 function partThreeB () {
-  alert("Try it!");
+  //alert("Try it!");
   let bill, billNumber, tip, message;
   // 1. prompt the user for the bill
-  
+  bill = prompt("What is your bill?");
   // 2. convert the bill to a number
-  
+  billNumber = Number(bill);
   // 3. calculate the tip
-  
-  // 4. create the message
+  tip = twentyPercentTip(billNumber);
+    // 4. create the message
+    message = tipMessage(tip, bill, 20);
   // HINT: use tipMessage, which is defined above partThreeA
   
   // 5. set the message
@@ -148,13 +152,14 @@ function partFourB () {
   alert("Try it!");
   let bill, billNumber, split, message;
   // 1. prompt for bill
-
+  bill = prompt("What is your bill?");
   // 2. convert bill to number 
+  billNumber = Number(bill);
 
   // 3. use a function to calculate the split
-
+  split = splitBillByFour(billNumber);
   // 4. use a function to create the message
-
+  message = messageForSplitBill(bill, split, "four");
   messageParagraph.innerHTML = message;
 }
 

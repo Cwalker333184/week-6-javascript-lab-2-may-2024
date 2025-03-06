@@ -33,11 +33,12 @@ function partOneB () {
   guessNumber = Number(guess);
 
   // 1. check if the number is equal to the answer
-
+  if (guessNumber === answer) {
     // 2. if it is, set the message for correct.
-
+    messageParagraph.innerHTML = `You guessed the number! It was ${answer}.`;
+  } else {
     // 3. if not, set the message for wrong guess.
-
+ messageParagraph.innerHTML = `You did not guess the number. Try again.`;
 }
 
 // Example
@@ -70,13 +71,15 @@ function partTwoB () {
   guessNumber = Number(guess);
 
   // 1. check if the number is too low.
-
+if(guessNumber < answer) {
     // 2. if it is, set the message for too low.
-
+messageParagraph.innerHTML = `Your guess is too low. Try again.`; 
+} else if (guessNumber > answer) {
     // 3. if not, set the message for too high.
-
+messageParagraph.innerHTML = `You guessed the number! It was ${answer}`
+} else {
     // 4. if not, set the message for correct.
-
+messageParagraph.innerHTML = `You guessed the number! It was ${answer}.`
 }
 
 // Example
@@ -105,15 +108,17 @@ function partThreeB () {
   let color;
   color = prompt("What color describes your mood today?");
   // 1. check for your first color
-
+if9color === "red") {
     // 2. give the message for this color
-
+messageParagraph.innerHTML = `What emotion is the color red said to represent?`;
   // 3. check for the next color
-
+} else if(color === "purple") {
     // 4. give the message for the next color
-    
+    messageParagraph.innerHTML = `The purple lotus blooms in the stillness, a symbol of enlightenment.`;
+} else {
   // 5. otherwise, ask for another color
-
+messageParagraph.innerHTML = `Try another color.`;
+}
 }
 
 // Example
